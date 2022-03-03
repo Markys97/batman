@@ -1,0 +1,16 @@
+._container{
+    max-width:578px;
+    margin: 0 auto;
+    height: auto;
+
+    @media (max-width:320px) {
+        max-width: 279px;
+    }
+}
+
+html{
+    font-size: 10px;
+}
+.page-index{
+    position: relative;
+}

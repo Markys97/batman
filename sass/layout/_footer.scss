@@ -1,0 +1,53 @@
+.footer{
+    width: 100%;
+    background: black;
+    min-height: 48px;
+    padding-top: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    &__list{
+        width: 100%;
+        display: flex;
+        gap:20px;
+        margin-bottom: 6px;
+        &-item{
+
+        }
+        &-text{
+         
+            font-size: 9px;
+            line-height: 11px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+        
+        
+        
+    }
+    
+    &__copyRight{
+        font-size: 9px;
+        line-height: 11px;
+        /* identical to box height */
+        
+        text-transform: uppercase;
+        
+        color: #6A6A6A;
+        text-align: center;
+    }
+
+    @media (max-width:384px) {
+        &__list{
+         
+            gap:14px;
+
+        }
+        &__list{
+            &-text{
+                font-size: 6px;
+            }
+        }
+    }
+}

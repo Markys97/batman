@@ -1,0 +1,162 @@
+.header{
+    width: 100%;
+    min-height: 48px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    &__container{
+        flex: 0 1 532px;
+        display: flex;
+        align-items: center;
+        padding:0 23px;
+       
+
+    }
+    &__btn-mobile{
+        display: none;
+        cursor: pointer;
+        
+    }
+    &__mobile{
+         display: flex;
+        align-items: center;
+        padding:0 23px;
+        
+        
+        
+    }
+    &__menu{
+        &-list{
+            display: flex;
+
+        }
+        &-item{
+            height: 30px;
+        }
+        &-link{
+            display: inline-block;
+            padding:7px 14px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            height: 100%;
+            width: 100%;
+            color: #FFFFFF;
+            &--active{
+                background: red;
+            }
+            &:hover{
+                background: red;
+            }
+        }
+        
+    }
+    &__icons{
+        display:flex;
+        margin-left: 70px;
+    }
+    &__icon{
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    &__volume{
+        margin-right: 100px;
+        cursor: pointer;
+    }
+    &__close{
+        position: absolute;
+        top:20px;
+        left:20px;
+        cursor: pointer;
+        display: none;
+
+       
+    }
+    @media (max-width:808px){
+        &__container{
+            margin-right: 55px;
+        }
+    }
+    @media (max-width:768px) {
+        &__container{
+            margin-right: unset;
+        }
+       
+        &__close{
+            display: block;   
+        }
+        &__btn-mobile{
+            display: block;
+        }
+        &__mobile{
+            display: flex;
+            left:-100%;
+            position: absolute;
+           top:0;
+          
+           transition: all 300ms ease;
+           
+          flex-direction: column;
+          width: 240px;
+          height: 100%;
+          background: #260707;
+          z-index: 1;
+          padding-top: 90px;
+       }
+       &__menu{
+           width: 100%;
+           margin-bottom: 40px;
+        &-list{
+            display: block;
+            width: 100%;
+            
+
+        }
+        &-item{
+            height: 100%;
+            margin-bottom: 6px;
+        }
+        &-link{
+            display: inline-block;
+            padding:7px 14px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            height: 100%;
+            width: 100%;
+            color: #FFFFFF;
+            text-align: center;
+            
+            &--active{
+                background: red;
+            }
+        }
+        
+        }
+
+        &__icons{
+            display:flex;
+            margin-left: unset;
+        }
+       &__volume{
+        margin-right: 15px;
+        }
+    }
+   
+}
+
+.open-menu{
+         position: absolute;
+           top:0;
+           left:0%;
+           transition: all 300ms ease;
+}
