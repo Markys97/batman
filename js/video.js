@@ -3,18 +3,25 @@ let videoButtonImg= document.querySelector('.video__footer-imgBtn');
 let videoFrame= document.querySelector('.video__frame')
 let itemImgList= document.querySelectorAll('.video__img')
 
-videoButtonImg.addEventListener('click',e=>{
-    let stateRowVideo=e.target.dataset.videostate;
 
-    if(stateRowVideo === 'show'){
-        e.target.src= e.target.dataset.videoshow
-        videoRow.style.height='100%'
-        e.target.setAttribute('data-videostate','hidden')
-    }else{
+
+videoButtonImg.addEventListener('click',e=>{
+   
+    
+   
+    if(e.target.dataset.photostate === 'show'){
         e.target.src= e.target.dataset.videoclose
-        videoRow.style.height='0px'
-        e.target.setAttribute('data-videostate','show')
+        e.target.setAttribute('data-photostate','hidden');
+        videoRow.style.height='100%';
+        
+
+    }else{
+        e.target.src= e.target.dataset.videoshow
+        e.target.setAttribute('data-photostate','show');
+        videoRow.style.height='0px';
     }
+
+
 
 })
 

@@ -7,16 +7,20 @@ let itemImgList= document.querySelectorAll('.photo__img')
 
 photoButtonImg.addEventListener('click',e=>{
     let stateRowphoto=e.target.dataset.photostate;
-
-    if(stateRowphoto === 'show'){
-        e.target.src= e.target.dataset.photoshow
-        photoRow.style.height='100%'
-        e.target.setAttribute('data-photostate','hidden')
-    }else{
+    console.log(e.target)
+   
+    if(e.target.dataset.photostate === 'show'){
         e.target.src= e.target.dataset.photoclose
-        photoRow.style.height='0px'
-        e.target.setAttribute('data-photostate','show')
+        e.target.setAttribute('data-photostate','hidden');
+        photoRow.style.height='100%';
+        
+    }else{
+        e.target.src= e.target.dataset.photoshow
+        e.target.setAttribute('data-photostate','show');
+        photoRow.style.height='0px';
     }
+
+
 
 })
 
@@ -34,6 +38,7 @@ itemImgList.forEach((itemImg,index,itemImgs)=>{
         itemImg.classList.add('active')
 
         photoFrame.src= itemImg.dataset.imagesrc
+        
      
 
     })
