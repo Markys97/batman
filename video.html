@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
-     rel="stylesheet" />
-
     <link rel="stylesheet" href="./sass/main.css">
-    <title>Document</title>
+    <title>Video</title>
 </head>
-<body class="page-index">
+<body class="page-video">
     <div class="main">
         <header class="header">
            
@@ -24,10 +22,10 @@
                     <nav class="header__menu">
                         <ul class="header__menu-list">
                             <li class="header__menu-item">
-                                <a href="./index.html" class="header__menu-link header__menu-link--active">Главная</a>
+                                <a href="./index.html" class="header__menu-link ">Главная</a>
                             </li>
                             <li class="header__menu-item">
-                                <a href="./video.html" class="header__menu-link">Видео</a>
+                                <a href="./video.html" class="header__menu-link header__menu-link--active">Видео</a>
                             </li>
                             <li class="header__menu-item">
                                 <a href="#" class="header__menu-link">Фото</a>
@@ -54,14 +52,36 @@
                 <img src="./img/volume off.png" data-src="./img/volume off.png" data-volumesrc="./img/volume on.png" data-state="off" alt=" handler volume ">
             </div>
         </header>
-        <section class="index">
-            <div class="index__bg">
-                <img src="./img/bbg.png"   alt=" background section">
+        <section class="video">
+            <div class="video__video">
+                <iframe src="https://www.youtube.com/embed/u34gHaRiBIU" frameborder="0"  class="video__frame"></iframe>
             </div>
-            <div class="index__content">
-                <div class="index__img">
-                    <img  src="./img/Logo Batman.png" alt=" logo of site">
-                </div>
+            <div class="video__footer">
+               <div class="video__footer-container ">
+                   <button class="video__footer-btn">
+                       <img class="video__footer-imgBtn" src="./img/up.png" alt=" button open" data-videoclose="./img/down.png" 
+                       data-videoshow="./img/up.png"
+                       data-videostate="show";
+                       >
+                   </button>
+                    <div class="video__row">
+                        <div class="video__item">
+                            <div class="video__img" data-traller="https://www.youtube.com/embed/mqqft2x_Aa4">
+                                <img src="./img/1.jpg" alt="image d'introduction a des video">
+                            </div>
+                        </div>
+                        <div class="video__item">
+                            <div class="video__img" data-traller="https://www.youtube.com/embed/drQWopZDEEY">
+                                <img src="./img/2.jpg" alt="image d'introduction a des video">
+                            </div>
+                        </div>
+                        <div class="video__item">
+                            <div class="video__img" data-traller="https://www.youtube.com/embed/Ua-WmN093UE">
+                                <img src="./img/3.jpg" alt="image d'introduction a des video">
+                            </div>
+                        </div>
+                    </div>
+               </div>
             </div>
         </section>
         <footer class="footer">
@@ -94,8 +114,7 @@
             </div>
         </footer>
     </div>
-
     <script src="./js/header.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/video.js"></script>
 </body>
 </html>
